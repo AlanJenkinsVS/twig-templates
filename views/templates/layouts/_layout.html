@@ -1,0 +1,26 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    {% block head %}
+      <link rel="stylesheet" href="/views/media/css/style.css" />
+      <title>{% block title %}{% endblock %} - My Webpage</title>
+
+      {{ asset_preload() }}
+      {{ asset_scripts() }}
+    {% endblock %}
+  </head>
+  <body>
+    <!-- <pre>{{ dump(amp_scripts ) }}</pre> -->
+
+    <div class="flex flex-col h-screen">
+      <header>
+        {% include ('components/header.html') %}
+      </header>
+      <div id="content" class="flex-1 max-w-xl w-full mx-auto">
+        {% block content %}{% endblock %}
+      </div>
+
+      {% include ('components/footer.html') %}
+    </div>
+  </body>
+</html>

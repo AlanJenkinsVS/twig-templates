@@ -1,0 +1,15 @@
+{{ preload_asset({ href: "https://cdn.ampproject.org/v0/amp-bind-0.1.js", as: "script", rel: "preload" }) }}
+{{ preload_asset({ href: "https://cdn.ampproject.org/v0/amp-mustache-0.2.js", as: "script", rel: "preload" }) }}
+
+{{ registerScript({ src: "https://cdn.ampproject.org/v0.js", async: true }) }}
+{{ registerScript({ src: "https://cdn.ampproject.org/v0/amp-bind-0.1.js", 'custom-element': "amp-bind", async: true }) }}
+{{ registerScript({ src: "https://cdn.ampproject.org/v0/amp-mustache-0.2.js", 'custom-template': "amp-mustache", async: true }) }}
+
+{% set css = css ? css : 'p-2 rounded text-white bg-red' %}
+{% set text = text ? text : 'Button' %}
+
+<button class="{{ css }}">
+  {{ text }}
+</button>
+
+<!-- <pre>{{ dump( amp_scripts ) }}</pre> -->

@@ -1,0 +1,12 @@
+<div class="{{ props.css.nav }}">
+  <ul class="{{ props.css.container }}">
+    {% for item in props.nodes %}
+      <li class="{{ props.css.item }}">
+        <a class="{{ props.css.link }}" href="{{ item.url }}">{{ item.text }}</a>
+
+        {# <pre>{{ dump(item.nodes )}}</pre> #}
+        {% include ('components/sub_menu.html') with { props: { nodes: item.nodes, css: props.css } } only %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

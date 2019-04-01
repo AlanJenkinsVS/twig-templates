@@ -1,0 +1,8 @@
+{% import 'components/promo_unit.html' as promo_unit %}
+
+<input type="text" name="" id="" class="border p-2 px-3 rounded">
+
+{% include ('components/nav.html') with { props: view.nav } only %}
+
+{# {{ promo_unit.sliver({items: view.sliver_banner }) }} #}
+{% include ('components/promo_unit.html') with { props: view.sliver_banner } only %}

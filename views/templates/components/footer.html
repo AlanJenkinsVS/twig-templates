@@ -1,0 +1,11 @@
+<div id="footer" class="text-center text-sm border-t border-grey-lightest p-2 leading-loose text-grey-darker">
+  {% block footer %}
+    <p>We accept the following payments</p>
+
+    <p>&copy; {{ 'now' | date("Y")  }} {% include ('components/subfooter.html') %}</p>
+
+    <p>Registered Office. Yellow Brick House, New Bridge Street, Newcastle upon Tyne, NE12 2TY. VAT no. 436280455</p>
+
+    <p>eCommerce by <a href="https://visualsoft.co.uk" class="no-underline font-bold text-red-dark">Visualsoft</a></p>
+  {% endblock %}
+</div>

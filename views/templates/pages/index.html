@@ -1,0 +1,7 @@
+{% extends "layouts/_layout.html" %}
+
+{% block title %}{{ view.document.title }}{% endblock %}
+
+{% block content %}
+  {% include ('components/button.html') with { text: 'Click me!' } %}
+{% endblock %}

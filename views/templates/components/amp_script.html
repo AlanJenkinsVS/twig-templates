@@ -1,0 +1,10 @@
+{% block amp_script %}
+  (Amp Script Scope)
+  <span class="text-red uppercase">
+    {% block inject_amp %}(Inject Scope) 
+    {{ is_amp_script }}
+    {% endblock %}
+  </span>
+
+  {{ is_amp_script }}
+{% endblock %}
